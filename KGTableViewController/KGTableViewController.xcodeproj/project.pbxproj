@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		061921EC1E63CEBB00DA8273 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 061921EB1E63CEBB00DA8273 /* main.m */; };
+		061921EF1E63CEBB00DA8273 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 061921EE1E63CEBB00DA8273 /* AppDelegate.m */; };
+		061921F21E63CEBB00DA8273 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061921F11E63CEBB00DA8273 /* ViewController.m */; };
+		061921F51E63CEBB00DA8273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061921F31E63CEBB00DA8273 /* Main.storyboard */; };
+		061921F81E63CEBB00DA8273 /* KGTableViewController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 061921F61E63CEBB00DA8273 /* KGTableViewController.xcdatamodeld */; };
+		061921FA1E63CEBB00DA8273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 061921F91E63CEBB00DA8273 /* Assets.xcassets */; };
+		061921FD1E63CEBB00DA8273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061921FB1E63CEBB00DA8273 /* LaunchScreen.storyboard */; };
+		061922081E63CEBB00DA8273 /* KGTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 061922071E63CEBB00DA8273 /* KGTableViewControllerTests.m */; };
+		061922131E63CEBB00DA8273 /* KGTableViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 061922121E63CEBB00DA8273 /* KGTableViewControllerUITests.m */; };
+		061922221E649ECE00DA8273 /* KGList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 061922211E649ECE00DA8273 /* KGList.plist */; };
+		061922251E64A16100DA8273 /* KGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061922241E64A16100DA8273 /* KGTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		061922041E63CEBB00DA8273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061921DF1E63CEBB00DA8273 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 061921E61E63CEBB00DA8273;
+			remoteInfo = KGTableViewController;
+		};
+		0619220F1E63CEBB00DA8273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061921DF1E63CEBB00DA8273 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 061921E61E63CEBB00DA8273;
+			remoteInfo = KGTableViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		061921E71E63CEBB00DA8273 /* KGTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KGTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		061921EB1E63CEBB00DA8273 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		061921ED1E63CEBB00DA8273 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		061921EE1E63CEBB00DA8273 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		061921F01E63CEBB00DA8273 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		061921F11E63CEBB00DA8273 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		061921F41E63CEBB00DA8273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		061921F71E63CEBB00DA8273 /* KGTableViewController.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KGTableViewController.xcdatamodel; sourceTree = "<group>"; };
+		061921F91E63CEBB00DA8273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		061921FC1E63CEBB00DA8273 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		061921FE1E63CEBB00DA8273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		061922031E63CEBB00DA8273 /* KGTableViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KGTableViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		061922071E63CEBB00DA8273 /* KGTableViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KGTableViewControllerTests.m; sourceTree = "<group>"; };
+		061922091E63CEBB00DA8273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0619220E1E63CEBB00DA8273 /* KGTableViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KGTableViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		061922121E63CEBB00DA8273 /* KGTableViewControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KGTableViewControllerUITests.m; sourceTree = "<group>"; };
+		061922141E63CEBB00DA8273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		061922211E649ECE00DA8273 /* KGList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KGList.plist; sourceTree = "<group>"; };
+		061922231E64A16100DA8273 /* KGTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGTableViewController.h; sourceTree = "<group>"; };
+		061922241E64A16100DA8273 /* KGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		061921E41E63CEBB00DA8273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		061922001E63CEBB00DA8273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0619220B1E63CEBB00DA8273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		061921DE1E63CEBB00DA8273 = {
+			isa = PBXGroup;
+			children = (
+				061921E91E63CEBB00DA8273 /* KGTableViewController */,
+				061922061E63CEBB00DA8273 /* KGTableViewControllerTests */,
+				061922111E63CEBB00DA8273 /* KGTableViewControllerUITests */,
+				061921E81E63CEBB00DA8273 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		061921E81E63CEBB00DA8273 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				061921E71E63CEBB00DA8273 /* KGTableViewController.app */,
+				061922031E63CEBB00DA8273 /* KGTableViewControllerTests.xctest */,
+				0619220E1E63CEBB00DA8273 /* KGTableViewControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		061921E91E63CEBB00DA8273 /* KGTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				061921ED1E63CEBB00DA8273 /* AppDelegate.h */,
+				061921EE1E63CEBB00DA8273 /* AppDelegate.m */,
+				061921F01E63CEBB00DA8273 /* ViewController.h */,
+				061921F11E63CEBB00DA8273 /* ViewController.m */,
+				061921F31E63CEBB00DA8273 /* Main.storyboard */,
+				061922231E64A16100DA8273 /* KGTableViewController.h */,
+				061922241E64A16100DA8273 /* KGTableViewController.m */,
+				061921F91E63CEBB00DA8273 /* Assets.xcassets */,
+				061921FB1E63CEBB00DA8273 /* LaunchScreen.storyboard */,
+				061921FE1E63CEBB00DA8273 /* Info.plist */,
+				061922201E649E8D00DA8273 /* Resources */,
+				061921F61E63CEBB00DA8273 /* KGTableViewController.xcdatamodeld */,
+				061921EA1E63CEBB00DA8273 /* Supporting Files */,
+			);
+			path = KGTableViewController;
+			sourceTree = "<group>";
+		};
+		061921EA1E63CEBB00DA8273 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				061921EB1E63CEBB00DA8273 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		061922061E63CEBB00DA8273 /* KGTableViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				061922071E63CEBB00DA8273 /* KGTableViewControllerTests.m */,
+				061922091E63CEBB00DA8273 /* Info.plist */,
+			);
+			path = KGTableViewControllerTests;
+			sourceTree = "<group>";
+		};
+		061922111E63CEBB00DA8273 /* KGTableViewControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				061922121E63CEBB00DA8273 /* KGTableViewControllerUITests.m */,
+				061922141E63CEBB00DA8273 /* Info.plist */,
+			);
+			path = KGTableViewControllerUITests;
+			sourceTree = "<group>";
+		};
+		061922201E649E8D00DA8273 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				061922211E649ECE00DA8273 /* KGList.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		061921E61E63CEBB00DA8273 /* KGTableViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 061922171E63CEBB00DA8273 /* Build configuration list for PBXNativeTarget "KGTableViewController" */;
+			buildPhases = (
+				061921E31E63CEBB00DA8273 /* Sources */,
+				061921E41E63CEBB00DA8273 /* Frameworks */,
+				061921E51E63CEBB00DA8273 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KGTableViewController;
+			productName = KGTableViewController;
+			productReference = 061921E71E63CEBB00DA8273 /* KGTableViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		061922021E63CEBB00DA8273 /* KGTableViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0619221A1E63CEBB00DA8273 /* Build configuration list for PBXNativeTarget "KGTableViewControllerTests" */;
+			buildPhases = (
+				061921FF1E63CEBB00DA8273 /* Sources */,
+				061922001E63CEBB00DA8273 /* Frameworks */,
+				061922011E63CEBB00DA8273 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				061922051E63CEBB00DA8273 /* PBXTargetDependency */,
+			);
+			name = KGTableViewControllerTests;
+			productName = KGTableViewControllerTests;
+			productReference = 061922031E63CEBB00DA8273 /* KGTableViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0619220D1E63CEBB00DA8273 /* KGTableViewControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0619221D1E63CEBB00DA8273 /* Build configuration list for PBXNativeTarget "KGTableViewControllerUITests" */;
+			buildPhases = (
+				0619220A1E63CEBB00DA8273 /* Sources */,
+				0619220B1E63CEBB00DA8273 /* Frameworks */,
+				0619220C1E63CEBB00DA8273 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				061922101E63CEBB00DA8273 /* PBXTargetDependency */,
+			);
+			name = KGTableViewControllerUITests;
+			productName = KGTableViewControllerUITests;
+			productReference = 0619220E1E63CEBB00DA8273 /* KGTableViewControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		061921DF1E63CEBB00DA8273 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Kavita Gaitonde";
+				TargetAttributes = {
+					061921E61E63CEBB00DA8273 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					061922021E63CEBB00DA8273 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 061921E61E63CEBB00DA8273;
+					};
+					0619220D1E63CEBB00DA8273 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 061921E61E63CEBB00DA8273;
+					};
+				};
+			};
+			buildConfigurationList = 061921E21E63CEBB00DA8273 /* Build configuration list for PBXProject "KGTableViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 061921DE1E63CEBB00DA8273;
+			productRefGroup = 061921E81E63CEBB00DA8273 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				061921E61E63CEBB00DA8273 /* KGTableViewController */,
+				061922021E63CEBB00DA8273 /* KGTableViewControllerTests */,
+				0619220D1E63CEBB00DA8273 /* KGTableViewControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		061921E51E63CEBB00DA8273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				061922221E649ECE00DA8273 /* KGList.plist in Resources */,
+				061921FD1E63CEBB00DA8273 /* LaunchScreen.storyboard in Resources */,
+				061921FA1E63CEBB00DA8273 /* Assets.xcassets in Resources */,
+				061921F51E63CEBB00DA8273 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		061922011E63CEBB00DA8273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0619220C1E63CEBB00DA8273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		061921E31E63CEBB00DA8273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				061921F21E63CEBB00DA8273 /* ViewController.m in Sources */,
+				061921EF1E63CEBB00DA8273 /* AppDelegate.m in Sources */,
+				061921EC1E63CEBB00DA8273 /* main.m in Sources */,
+				061921F81E63CEBB00DA8273 /* KGTableViewController.xcdatamodeld in Sources */,
+				061922251E64A16100DA8273 /* KGTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		061921FF1E63CEBB00DA8273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				061922081E63CEBB00DA8273 /* KGTableViewControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0619220A1E63CEBB00DA8273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				061922131E63CEBB00DA8273 /* KGTableViewControllerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		061922051E63CEBB00DA8273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 061921E61E63CEBB00DA8273 /* KGTableViewController */;
+			targetProxy = 061922041E63CEBB00DA8273 /* PBXContainerItemProxy */;
+		};
+		061922101E63CEBB00DA8273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 061921E61E63CEBB00DA8273 /* KGTableViewController */;
+			targetProxy = 0619220F1E63CEBB00DA8273 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		061921F31E63CEBB00DA8273 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				061921F41E63CEBB00DA8273 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		061921FB1E63CEBB00DA8273 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				061921FC1E63CEBB00DA8273 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		061922151E63CEBB00DA8273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		061922161E63CEBB00DA8273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		061922181E63CEBB00DA8273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KGTableViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavitagaitonde.KGTableViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		061922191E63CEBB00DA8273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KGTableViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavitagaitonde.KGTableViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0619221B1E63CEBB00DA8273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KGTableViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavitagaitonde.KGTableViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KGTableViewController.app/KGTableViewController";
+			};
+			name = Debug;
+		};
+		0619221C1E63CEBB00DA8273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KGTableViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavitagaitonde.KGTableViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KGTableViewController.app/KGTableViewController";
+			};
+			name = Release;
+		};
+		0619221E1E63CEBB00DA8273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KGTableViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavitagaitonde.KGTableViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KGTableViewController;
+			};
+			name = Debug;
+		};
+		0619221F1E63CEBB00DA8273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KGTableViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavitagaitonde.KGTableViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KGTableViewController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		061921E21E63CEBB00DA8273 /* Build configuration list for PBXProject "KGTableViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				061922151E63CEBB00DA8273 /* Debug */,
+				061922161E63CEBB00DA8273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		061922171E63CEBB00DA8273 /* Build configuration list for PBXNativeTarget "KGTableViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				061922181E63CEBB00DA8273 /* Debug */,
+				061922191E63CEBB00DA8273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0619221A1E63CEBB00DA8273 /* Build configuration list for PBXNativeTarget "KGTableViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0619221B1E63CEBB00DA8273 /* Debug */,
+				0619221C1E63CEBB00DA8273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0619221D1E63CEBB00DA8273 /* Build configuration list for PBXNativeTarget "KGTableViewControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0619221E1E63CEBB00DA8273 /* Debug */,
+				0619221F1E63CEBB00DA8273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		061921F61E63CEBB00DA8273 /* KGTableViewController.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				061921F71E63CEBB00DA8273 /* KGTableViewController.xcdatamodel */,
+			);
+			currentVersion = 061921F71E63CEBB00DA8273 /* KGTableViewController.xcdatamodel */;
+			path = KGTableViewController.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 061921DF1E63CEBB00DA8273 /* Project object */;
+}
