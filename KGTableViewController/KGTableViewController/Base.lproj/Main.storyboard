@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,12 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgd-Hx-LTq">
-                                <frame key="frameInset" minX="118" minY="147" width="138" height="30"/>
+                                <frame key="frameInset" minX="118" minY="260" width="138" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="TableViewController"/>
                                 <connections>
-                                    <segue destination="t8b-wx-uxO" kind="show" id="1eh-CP-dbs"/>
+                                    <action selector="launchTableViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qNn-7Z-Dhh"/>
+                                    <segue destination="t8b-wx-uxO" kind="show" id="cx9-rx-tgx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -32,7 +33,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="V9p-Pe-tRJ"/>
                     <connections>
-                        <outlet property="tableViewControllerButton" destination="Fgd-Hx-LTq" id="gx9-rv-GoU"/>
+                        <outlet property="buttonTableViewController" destination="Fgd-Hx-LTq" id="nlT-cl-QeU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

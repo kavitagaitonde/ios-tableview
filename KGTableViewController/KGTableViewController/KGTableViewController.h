@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KGTableViewController : UITableViewController
+@interface KGTableViewController : UITableViewController <NSURLSessionDelegate>
 
 @end

@@ -2,22 +2,55 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Persons</key>
+	<key>Fruits</key>
 	<array>
 		<dict>
 			<key>Name</key>
-			<string>Vik</string>
-			<key>Activities</key>
-			<array>
-				<dict>
-					<key>Name</key>
-					<string>Tennis</string>
-					<key>Type</key>
-					<string>Sport</string>
-					<key>Time</key>
-					<string>M,W,F</string>
-				</dict>
-			</array>
+			<string>Apple</string>
+			<key>Url</key>
+			<string>http://pngimg.com/upload_small/apple/apple_PNG12507.png</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Banana</string>
+			<key>Url</key>
+			<string>http://pngimg.com/upload_small/banana/banana_PNG841.png</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Raspberry</string>
+			<key>Url</key>
+			<string>http://pngimg.com/upload_small/raspberry/raspberry_PNG5076.png</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Strawberry</string>
+			<key>Url</key>
+			<string>http://pngimg.com/upload_small/strawberry/strawberry_PNG2595.png</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Peach</string>
+			<key>Url</key>
+			<string>http://pngimg.com/upload_small/peach/peach_PNG4893.png</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Pear</string>
+			<key>Url</key>
+			<string>http://pngimg.com/upload_small/pear/pear_PNG3466.png</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Persimmon</string>
+			<key>Url</key>
+			<string>http://pngimg.com/upload_small/persimmon/persimmon_PNG9191.png</string>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Orange</string>
+			<key>Url</key>
+			<string>http://pngimg.com/upload_small/orange/orange_PNG752.png</string>
 		</dict>
 	</array>
 </dict>

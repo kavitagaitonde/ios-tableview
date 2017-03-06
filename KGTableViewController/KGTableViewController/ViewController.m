@@ -9,8 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *buttonTableViewController;
 
-@property (weak, nonatomic) IBOutlet UIButton *tableViewControllerButton;
 @end
 
 @implementation ViewController
@@ -26,5 +26,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)launchTableViewController:(id)sender {
+    NSLog(@"launchTableViewController");
+}
 
 @end

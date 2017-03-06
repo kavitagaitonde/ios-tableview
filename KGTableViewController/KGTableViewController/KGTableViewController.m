@@ -8,15 +8,29 @@
 
 #import "KGTableViewController.h"
 
-@interface KGTableViewController ()
+@interface Fruit : NSObject
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong) UIImage *image;
+@end
+
+@implementation Fruit
 
 @end
+
+@interface KGTableViewController () 
+@property (nonatomic, strong) NSMutableArray *fruits;
+@end
+
 
 @implementation KGTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //setup fruits urls array
+    [self setupFruits];
+   
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -36,19 +50,51 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [self.fruits count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    static NSString * cellIndentifier = @"Fruit";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier /*forIndexPath:indexPath*/];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+        cell.imageView.backgroundColor = [UIColor blueColor];
+    }
+    CGSize itemSize = CGSizeMake(40, 40);
+    UIGraphicsBeginImageContextWithOptions(itemSize, NO, UIScreen.mainScreen.scale);
+    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+    [cell.imageView.image drawInRect:imageRect];
+    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    Fruit *fruit = self.fruits[indexPath.row];
+    cell.textLabel.text = fruit.name;
+    if (fruit.image) {
+        cell.imageView.image = fruit.image;
+    } else {
+        // set default user image while image is being downloaded
+        
+        // download the image asynchronously
+        NSLog(@"cellForRowAtIndexPath:started download - %@", fruit.name);
+        [self downloadImageWithURL:[NSURL URLWithString:fruit.url] completionBlock:^(BOOL succeeded, UIImage *image) {
+            if (succeeded) {
+                // change the image in the cell
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    cell.imageView.image = image;
+                    cell.imageView.backgroundColor = [UIColor clearColor];
+                });
+                 // cache the image for use later (when scrolling up)
+                fruit.image = image;
+                
+                //[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                NSLog(@"cellForRowAtIndexPath:completed download - %@", fruit.name);
+            }
+        }];
+    }
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -93,5 +139,41 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark -  Setup fruits from plist
+
+- (void)setupFruits
+{
+     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"KGList" ofType:@"plist"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    NSArray *arr = [dict objectForKey:@"Fruits"];
+    self.fruits = [NSMutableArray array];
+    for(NSDictionary *d in arr) {
+        Fruit *fruit = [[Fruit alloc] init];
+        [fruit setName:[d objectForKey:@"Name"]];
+        [fruit setUrl:[d objectForKey:@"Url"]];
+        [self.fruits addObject:fruit];
+    }
+    NSLog(@"setupFruits - %@", self.fruits);
+}
+
+#pragma mark -  Asynchronous Download
+
+- (void)downloadImageWithURL:(NSURL *)url completionBlock:(void (^)(BOOL succeeded, UIImage *image))completionBlock
+{
+    NSLog(@"downloadImageWithURL:started for - %@", url.absoluteString);
+    NSURLSessionDownloadTask *downloadTask = [[NSURLSession sharedSession] downloadTaskWithURL:url
+            completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+                if(error) {
+                    completionBlock(NO, nil);
+                } else {
+                    UIImage *downloadedImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:location]];
+                    NSLog(@"downloadImageWithURL:completed for - %@", url.absoluteString);
+                    completionBlock(YES, downloadedImage);
+                }
+    }];
+    
+    [downloadTask resume];
+}
 
 @end
