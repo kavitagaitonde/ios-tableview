@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, KGType) {
+    KGDispatchAsync,
+    KGNSOperation
+};
+
 @interface KGTableViewController : UITableViewController <NSURLSessionDelegate>
+
+@property (nonatomic, assign) KGType kgType;
 
 @end

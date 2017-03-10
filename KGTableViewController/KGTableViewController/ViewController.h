@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KGTableViewController.h"
 
 @interface ViewController : UIViewController
-
 
 @end
 

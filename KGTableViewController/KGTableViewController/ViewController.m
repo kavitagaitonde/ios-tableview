@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *buttonTableViewController;
+@property (weak, nonatomic) IBOutlet UIButton *operationTableViewController;
 
 @end
 
@@ -28,6 +29,18 @@
 
 - (IBAction)launchTableViewController:(id)sender {
     NSLog(@"launchTableViewController");
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    KGTableViewController *vc = segue.destinationViewController;
+    if(sender == self.buttonTableViewController) {
+        [vc setKgType:KGDispatchAsync];
+    } else if (sender == self.operationTableViewController) {
+        [vc setKgType:KGNSOperation];
+    } else {
+        NSLog(@"Unknown segue");
+    }
+    
 }
 
 @end

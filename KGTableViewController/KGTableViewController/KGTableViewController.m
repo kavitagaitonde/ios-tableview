@@ -20,6 +20,7 @@
 
 @interface KGTableViewController () 
 @property (nonatomic, strong) NSMutableArray *fruits;
+@property (nonatomic, strong) NSOperationQueue *downloadQ;
 @end
 
 
@@ -30,6 +31,10 @@
     
     //setup fruits urls array
     [self setupFruits];
+    
+    if(self.kgType == KGNSOperation) {
+        [self downloadOperations];
+    }
    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -73,24 +78,24 @@
     if (fruit.image) {
         cell.imageView.image = fruit.image;
     } else {
-        // set default user image while image is being downloaded
-        
-        // download the image asynchronously
-        NSLog(@"cellForRowAtIndexPath:started download - %@", fruit.name);
-        [self downloadImageWithURL:[NSURL URLWithString:fruit.url] completionBlock:^(BOOL succeeded, UIImage *image) {
-            if (succeeded) {
-                // change the image in the cell
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    cell.imageView.image = image;
-                    cell.imageView.backgroundColor = [UIColor clearColor];
-                });
-                 // cache the image for use later (when scrolling up)
-                fruit.image = image;
-                
-                //[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
-                NSLog(@"cellForRowAtIndexPath:completed download - %@", fruit.name);
-            }
-        }];
+        if(self.kgType == KGDispatchAsync) {
+            // download the image asynchronously
+            NSLog(@"cellForRowAtIndexPath:started download - %@", fruit.name);
+            [self downloadImageWithURL:[NSURL URLWithString:fruit.url] completionBlock:^(BOOL succeeded, UIImage *image) {
+                if (succeeded) {
+                    // change the image in the cell
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        cell.imageView.image = image;
+                        cell.imageView.backgroundColor = [UIColor clearColor];
+                    });
+                    // cache the image for use later (when scrolling up)
+                    fruit.image = image;
+                    
+                    //[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                    NSLog(@"cellForRowAtIndexPath:completed download - %@", fruit.name);
+                }
+            }];            
+        }
     }
     return cell;
 }
@@ -144,7 +149,7 @@
 
 - (void)setupFruits
 {
-     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"KGList" ofType:@"plist"];
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"KGList" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
     NSArray *arr = [dict objectForKey:@"Fruits"];
     self.fruits = [NSMutableArray array];
@@ -174,6 +179,30 @@
     }];
     
     [downloadTask resume];
+}
+
+#pragma mark -  NSOperation Download
+
+- (void)downloadOperations
+{
+    NSLog(@"downloadOperations:started");
+    self.downloadQ = [[NSOperationQueue alloc] init];
+    self.downloadQ.maxConcurrentOperationCount = 4;
+    NSUInteger i = 0;
+    for(Fruit *f in self.fruits) {
+        [self.downloadQ addOperationWithBlock:^{
+            NSURL *url = [NSURL URLWithString:f.url];
+            [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {
+                if(succeeded) {
+                    f.image = image;
+                    [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+                }
+            }];
+        }];
+        i++;
+    }
+    
+
 }
 
 @end
